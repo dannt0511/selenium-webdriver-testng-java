@@ -11,13 +11,16 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 public class Topic_01_Setup_Environment {
+	// Khai báo biến để đại diện cho thư viện Selenium webdriver
 	WebDriver driver;
 	String projectPath = System.getProperty("user.dir");
 
 	@BeforeClass
 	public void beforeClass() {
+//		 Mở browser lên
 		System.setProperty("webdriver.gecko.driver", projectPath + "\\browserDrivers\\geckodriver.exe");
 		driver = new FirefoxDriver();
+//		Maximize browser
 		driver.manage().window().maximize();
 		driver.get("https://www.facebook.com/");
 	}

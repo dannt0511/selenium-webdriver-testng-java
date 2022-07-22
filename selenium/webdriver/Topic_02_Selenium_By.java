@@ -23,8 +23,8 @@ public class Topic_02_Selenium_By {
 	}
 
 //	HTML: 
-//	Sub email txtbox <input type="email" class="form-control sub_email" id="exampleInputEmail1" placeholder="Enter your email">
-//	Firstname txtbox <input class="form-control" type="text" placeholder="First Name" name="first_name" value="" required="">
+//	Sub email textbox <input type="email" class="form-control sub_email" id="exampleInputEmail1" placeholder="Enter your email">
+//	Firstname textbox <input class="form-control" type="text" placeholder="First Name" name="first_name" value="" required="">
 	@Test
 	public void TC_01_() {
 //		ID - exampleInputEmail1
@@ -33,13 +33,13 @@ public class Topic_02_Selenium_By {
 //		Class - sub_email
 		driver.findElement(By.className("sub_email"));
 		
-//		Name - first_name
-		driver.findElement(By.name("email"));
+//		Name - first_name textbox
+		driver.findElement(By.name("first_name"));
 		
-//		Tagname
+//		Tagname - Tìm các thẻ a
 		driver.findElements(By.tagName("a"));
 		
-//		Linktext
+//		Linktext - Link hotels
 		driver.findElement(By.linkText("Hotels"));
 		
 //		Partial linktext
