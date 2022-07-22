@@ -19,7 +19,7 @@ public class Topic_02_Selenium_By {
 		System.setProperty("webdriver.gecko.driver", projectPath + "\\browserDrivers\\geckodriver.exe");
 		driver = new FirefoxDriver();
 		driver.manage().window().maximize();
-		driver.get("https://www.phptravels.net/");
+		driver.get("https://www.phptravels.net/signup");
 	}
 
 //	HTML: 
@@ -47,6 +47,14 @@ public class Topic_02_Selenium_By {
 		driver.findElement(By.partialLinkText("tels"));
 		driver.findElement(By.partialLinkText("ote"));
 		driver.findElement(By.partialLinkText("Hotels"));
+		
+//		Xpath
+		driver.findElement(By.xpath("//input[@id ='exampleInputEmail1']"));
+		driver.findElement(By.xpath("//input[@name = 'first_name']"));
+		
+//		Css
+		driver.findElement(By.cssSelector("input[id ='exampleInputEmail1']"));
+		driver.findElement(By.cssSelector("input[name = 'first_name']"));
 	}
 
 	@AfterClass
